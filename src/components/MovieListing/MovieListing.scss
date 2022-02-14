@@ -1,0 +1,21 @@
+@import "../../common/colors.scss";
+
+.movie-list,
+.show-list,
+.episode-list {
+  margin: 20px 0px;
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+}
+
+.episode-error,
+.show-error,
+.movies-error {
+  color: white;
+  display: block;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,100 @@
+@import "../../common/colors.scss";
+
+.header {
+  background-color: $secondary-color;
+  height: 72px;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 16;
+}
+
+.logo {
+  display: flex;
+}
+
+.logoA {
+  height: 80px;
+}
+.Home {
+  display: flex;
+
+  div {
+    display: flex;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+
+    img {
+      height: 30px;
+    }
+
+    span {
+      font-size: 15px;
+      letter-spacing: 1.42px;
+      text-transform: uppercase;
+      position: relative;
+      &:after {
+        content: " ";
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -6px;
+        opacity: 0;
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0);
+      }
+    }
+
+    &:hover {
+      span:after {
+        transform: scaleX(1);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.user-image,
+.user-image img {
+  width: 38px;
+  height: 38px;
+}
+
+.search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+    button: {
+      padding: 0 8px;
+      font-size: 20px;
+      cursor: pointer;
+      height: 38px;
+    }
+  }
+
+  input {
+    font-size: 18px;
+    width: 100%;
+    padding: 5px 5px 5px 10px;
+    cursor: pointer;
+    height: 38px;
+  }
+}
